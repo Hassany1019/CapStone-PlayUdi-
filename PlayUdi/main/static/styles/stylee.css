@@ -151,26 +151,8 @@ ul.navbar li a:hover:not(.active) {
   background-position: center;
   position: relative;
 }
-.rakuto::before {
-  content: "";
-  width: 160px;
-  height: 160px;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  top: 10px;
-  left: 200px;
-}
-.rakuto::after {
-  content: "";
-  width: 400px;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  bottom: 0px;
-  left: -150px;
-}
+
+
 .logoo-section {
   display: flex;
   align-items: center;
@@ -676,7 +658,6 @@ ul li a:hover {
   position: relative;
 }
 .about-list label:after {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1012,3 +993,40 @@ a:hover {
     background-color: #ebeff8;
     color: #8D8D8D;
 }
+.r-arrow {
+    position: absolute;
+    left: 75%;
+    top: 110%;
+    right: -15px;
+    height: 15px;
+    border-bottom: 4px solid red;
+    border-left: 4px solid red;
+    border-radius: 0 0 0 10px ;
+
+  }
+
+.r-arrow::before {
+    content: "";
+    position: absolute;
+    left: 102%;
+    width: 0;
+    height: 0;
+    bottom: -15px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid red;
+    transform: rotate(90deg);
+}
+.l-arrow {
+    position: absolute;
+    left: -14px;
+    top: 110%;
+    right: 75%;
+    height: 15px;
+    border-bottom: 4px solid red;
+    border-right: 4px solid red;
+    border-radius: 0 0 10px 0;
+
+  }
+
+

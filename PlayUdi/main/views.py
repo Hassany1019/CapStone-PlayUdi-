@@ -11,11 +11,13 @@ from tournament.models import Profile,Tournament
 
 def home_view(request: HttpRequest):
     trophy=Trophy.objects.all()
-    profile= Profile.objects.all().order_by('-points')[0:5]
+
+    profile= Profile.objects.filter(states=1).order_by('-points')[0:4]
     tournament = Tournament.objects.all()[0:2]
     return render(request, "main/home.html",{"trophies":trophy,"profile":profile, "tournament":tournament})
 
-
+def error_view(request: HttpRequest):
+    return render(request, 'main/error_page.html')
 
 
 def chess_view(request: HttpRequest):
